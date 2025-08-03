@@ -50,14 +50,14 @@ ContourMapGenerator Content
 ## クイックスタート
 
 ### 1. プラグインをプロジェクトに導入
-#### 1. Unreal Engine 5 を起動し、**Edit ▸ Plugins** で **Contour Map Generator** を有効化 
+#### 1.1. Unreal Engine 5 を起動し、**Edit ▸ Plugins** で **Contour Map Generator** を有効化 
 
 <img src="../Images/Plugins.png" width="240" alt="">
 
-#### 2. エディタを再起動
+#### 1.2. エディタを再起動
 
 ### 2. マップの設定を作成
-#### 1. コンテンツブラウザ上で U_CMG_ContourMapSettingsAsset を親に Data Asset を作成
+#### 2.1. コンテンツブラウザ上で U_CMG_ContourMapSettingsAsset を親に Data Asset を作成
 
 <table>
 <tr>
@@ -66,7 +66,7 @@ ContourMapGenerator Content
 </tr>
 </table>
 
-#### 2. Data Asset の中身は [U_CMG_ContourMapSettingsAsset の詳細](#u_cmg_contourmapsettingsasset-の詳細) を参照
+#### 2.2. Data Asset の中身は [U_CMG_ContourMapSettingsAsset の詳細](#u_cmg_contourmapsettingsasset-の詳細) を参照
 
 <img src="../Images/AllSettings.png" width="400" alt="">
 
@@ -74,19 +74,19 @@ ContourMapGenerator Content
 
 ### 3. マップを用意
 
-#### 1. 目的とするレベルを複製
+#### 3.1. 目的とするレベルを複製
 
-#### 2. 等高線の出力に邪魔なものを削除(レベル上に配置してあるキャラクターなど)
-
-
+#### 3.2. 等高線の出力に邪魔なものを削除(レベル上に配置してあるキャラクターなど)
 
 
-### 画像の出力
-#### 1. EditorUtilityWidget を起動
+
+
+### 4. 画像の出力
+#### 4.1. EditorUtilityWidget を起動
 <img src="../Images/Run_EUW_CreateContourMap.png" width="200" alt="">
 
 
-#### 2. フォルダの用意とフォルダパスの指定
+#### 4.2. フォルダの用意とフォルダパスの指定
 
 <table>
 <tr>
@@ -95,24 +95,24 @@ ContourMapGenerator Content
 </tr>
 </table>
 
-#### 3. Data Asset の指定
+#### 4.3. Data Asset の指定
 
 <img src="../Images/EUW_SelectSettings.png" width="240" alt="">
 
 
 
-#### 4. [Generate]ボタンを押す
+#### 4.4. [Generate]ボタンを押す
 
 <img src="../Images/GenerateButton.png" width="240" alt="">
 
 
-### 画像のインポート
+### 5. 画像のインポート
 
-#### 1. コンテンツブラウザ上に新たなフォルダを作成
+#### 5.1. コンテンツブラウザ上に新たなフォルダを作成
 
-#### 2. 出力した画像をインポート
+#### 5.2. 出力した画像をインポート
 
-#### 3. コンテンツブラウザ上で U_CMG_ContourMapTileDataAsset を親に Data Asset を作成
+#### 5.3. コンテンツブラウザ上で U_CMG_ContourMapTileDataAsset を親に Data Asset を作成
 <table>
 <tr>
   <td><img src="../Images/MakeDataAsset.png" width="120">
@@ -121,7 +121,7 @@ ContourMapGenerator Content
 </table>
 
 
-#### 4. EditorUtilityWidget を起動
+#### 5.4. EditorUtilityWidget を起動
 <table>
 <tr>
   <td><img src="../Images/Run_EUW_TextureToDataAsset.png" width="240">
@@ -129,7 +129,7 @@ ContourMapGenerator Content
 </tr>
 </table>
 
-#### 5. フォルダパス
+#### 5.5. フォルダパス
 - フォルダパスに改行が入っている場合、それを取り除く
 
 <table>
@@ -139,24 +139,24 @@ ContourMapGenerator Content
 </tr>
 </table>
 
-#### 6. Data Asset を設定
+#### 5.6. Data Asset を設定
 
 <img src="../Images/EUW_SelectTileDataAsset.png" width="240" alt="">
 
-#### 7. [Texture -> DataTable]ボタンを押す
+#### 5.7. [Texture -> DataTable]ボタンを押す
 
 <img src="../Images/TexToDataAssetButton.png" width="240" alt="">
 
-#### 8. このようにデータテーブルが作成されていると成功
+#### 5.8. このようにデータテーブルが作成されていると成功
 
 <img src="../Images/DT_Tiles.png" width="240" alt="">
 
 
 
-### 等高線を表示する Widget を作成　
+### 6. 等高線を表示する Widget を作成　
 - [WB_CMG_ContourMapBaseの作成方法はこちら](#wb_cmg_contourmapbase-の作成方法)
 
-#### 1. WB_CMG_ContourMapBase を複製し名前を変更する
+#### 6.1. WB_CMG_ContourMapBase を複製し名前を変更する
 
 ```bash
 ContourMapGenerator Content
@@ -169,7 +169,7 @@ ContourMapGenerator Content
 └── Demo
 ```
 
-#### 2. 中の Data Asset を変更する
+#### 6.2. 中の Data Asset を変更する
 - 1 で複製した Widget Blueprint を開く
 - Graph タブを開き、Blueprint に移動する
 - Create Contour Map Renderer ノードの SettingsAsset と TileDataAsset を作成した Data Asset に変更する
@@ -179,7 +179,7 @@ ContourMapGenerator Content
 
 
 
-### WB_CMG_ContourMapBase の使用方法
+### 7. WB_CMG_ContourMapBase の使用方法
 
 ```bash
 ContourMapGenerator Content
@@ -200,9 +200,9 @@ ContourMapGenerator Content
         └── WBP_CMG_Demo_MiniMap   <= これを参考にしてください
 ```
 
-#### 1. 新たに Widget Blueprint を作成する
+#### 7.1. 新たに Widget Blueprint を作成する
 
-#### 2. WB_CMG_ContourMapBase を配置
+#### 7.2. WB_CMG_ContourMapBase を配置
 
 - WB_CMG_ContourMapBase 又は、[等高線を表示する Widget を作成](#等高線を表示する-widget-を作成) で作成した Widget を配置
 
@@ -218,12 +218,12 @@ ContourMapGenerator Content
 </table>
 
 
-#### 3. RenderTargetSize を設定
+#### 7.3. RenderTargetSize を設定
 - この値は、UCMG_ContourMapRenderer から得られる画像の画素数
 
 <img src="../Images/UseWBP_ContourMap/WBP_ContourMap_RenderTargetSize.png" width="240">
 
-#### 4. 地図の中心位置、回転、ズーム倍率を設定する
+#### 7.4. 地図の中心位置、回転、ズーム倍率を設定する
 - Graph に移行する
 - UCMG_ContourMapRenderer から UpdateState 関数を呼び出す
 - UpdateState 関数 を Event Tick に接続する
@@ -498,5 +498,6 @@ ContourMapGenerator Content
 #### 14. 全体像
 
 <img src="../Images/WBP_ContourMap/WBP_CM_BP_All.png" width="500">
+
 
 </details>
