@@ -14,5 +14,4 @@ This repository includes documentation in both English and Japanese.
 - Export terrain contour maps from UE5 levels
 - Display zoomable minimaps with orientation and level of detail
 
-
-<img src="./Images/DA_Settings/ContourMap_LOD000_X000_Y000.png" width="400">
+<img src="./Images/DA_Settings/ContourMap_LOD000_X000_Y000_Copy.png" width="400">
