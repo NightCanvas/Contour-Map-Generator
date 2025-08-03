@@ -322,7 +322,7 @@ ContourMapGenerator Content
 <table>
 <tr>
   <td><img src="../Images/DA_Settings/LineStyles.png" width="240">
-  <td><img src="../Images/DA_Settings/ContourMap_LOD000_X000_Y000.png" width="240">
+  <td><img src="../Images/DA_Settings/ContourMap_LOD000_X000_Y000_Copy.png" width="240">
 </tr>
 </table>
 
@@ -490,5 +490,6 @@ ContourMapGenerator Content
 #### 14. Full Blueprint Overview
 
 <img src="../Images/WBP_ContourMap/WBP_CM_BP_All.png" width="500">
+
 
 </details>
