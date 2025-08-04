@@ -22,7 +22,7 @@ ContourMapGenerator Content
 ├── WB_CMG_ContourMapBase         : Demo widget that shows the contour map  
 │                                   • choose center, heading, zoom level, and render-target size
 ├── Materials
-│   ├── T_CMG_SampleTexture         : Sample texture
+│   ├── T_CMG_SampleTexture       : Sample texture
 │   ├── M_CMG_ContourMapMaterial  : Converts a UTexture to a Material
 │   └── T_RoundMaskTexture
 └── Demo
@@ -493,4 +493,5 @@ ContourMapGenerator Content
 
 
 </details>
+
 
